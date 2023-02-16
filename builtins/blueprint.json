@@ -1,0 +1,7 @@
+{
+  "name": "account",
+  "dependencies": [
+    "name:sqlite3",
+    "name:account"
+  ]
+}

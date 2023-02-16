@@ -1,0 +1,23 @@
+module Account declares *
+
+data Ed25519KeyPair:
+  pubkey: string
+  privkey: string
+
+data FdbResult:
+  success: bool
+  err_msg: string
+
+data Record:
+  uuid: i64
+  wallet_address: string
+  public_key: string
+  private_key: string
+  err_msg: string
+  success: bool
+
+service Account("account"):
+  generate_keypair() -> Ed25519KeyPair
+  get_account(wallet_address: string) -> Record
+  initialize() -> FdbResult
+  shutdown() -> FdbResult

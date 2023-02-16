@@ -1,0 +1,20 @@
+{
+  "account": {
+    "modules": [
+      {
+        "name": "sqlite3",
+        "path": "artifacts/sqlite3.wasm",
+        "preopened_files": ["./tmp"],
+        "mapped_dirs": [["tmp", "./tmp"]],
+        "max_heap_size": "100 KiB",
+        "logger_enabled": true
+      },
+      {
+        "name": "account",
+        "path": "artifacts/account.wasm",
+        "logger_enabled": true,
+        "max_heap_size": "100 KiB"
+      }
+    ]
+  }
+}
